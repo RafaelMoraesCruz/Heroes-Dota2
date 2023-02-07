@@ -1,3 +1,16 @@
 # Heroes Dota2
 
-checar o arquivo app.ipynb para ver o estudo
+HOW TO USE
+
+<ul>
+<li>
+After clonning the repository, create virtual enviroment
+
+using git bash
+'''
+python3 -m venv venv
+. ./venv/Scripts/activate
+'''
+</li>
+
+</ul>
