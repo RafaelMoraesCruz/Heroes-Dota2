@@ -7,6 +7,7 @@ HOW TO USE
 After clonning the repository, create virtual enviroment
 
 using git bash
+
 ```
 python3 -m venv venv
 . ./venv/Scripts/activate
@@ -21,6 +22,7 @@ check <a src='https://towardsdatascience.com/installing-jupyter-notebook-support
 <li>To run the Streamlit application, make sure you have the venv running and installed all the requirements.txt packages, them write on terminal:
 ```
 streamlit run app.py
-```</li>
+```
+</li>
 
 </ol>
