@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import plotly.express as px
 
 df = pd.read_csv('./data/heroes_data_limpo.csv',sep=',')
 
@@ -28,4 +29,14 @@ def create_static_graph1(df):
     area.tight_layout(pad=2.0)
     return area
 
-    
+def create_dinamic_graph1(df,eixo_x='main_role',eixo_y='winrate'):
+    fig = px.scatter(data_frame=df, 
+                 x=eixo_x, 
+                 y=eixo_y, 
+                 color='primary_attr',
+                 marginal_y="box",
+                 hover_data=['main_role','winrate','primary_attr','localized_name'],
+                 title=f"<b> {eixo_y} por {eixo_x} dos herois </b>",
+                 width=1000, 
+                 height=600)
+    return fig
