@@ -36,7 +36,7 @@ with static_graph:
     st.pyplot(static_graph1)
     
 with dinamic_graph_title:
-    st.title('Gráficos dinâmicos')
+    st.title('Gráfico dinâmico')
     
 with legenda:
     st.write('Filtros')
