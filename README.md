@@ -26,4 +26,6 @@ streamlit run app.py
 ```
 </li>
 
+<h3> To access the deploy(dashboard only) https://rafaelmoraescruz-heroes-dota2-app-m5zhia.streamlit.app/ </h3>
+
 </ol>
