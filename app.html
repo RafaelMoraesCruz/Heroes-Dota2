@@ -38,22 +38,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-        <script type="text/javascript">
-        window.PlotlyConfig = {MathJaxConfig: 'local'};
-        if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-        if (typeof require !== 'undefined') {
-        require.undef("plotly");
-        requirejs.config({
-            paths: {
-                'plotly': ['https://cdn.plot.ly/plotly-2.16.1.min']
-            }
-        });
-        require(['plotly'], function(Plotly) {
-            window._Plotly = Plotly;
-        });
-        }
-        </script>
-        
 
 
 </head>
@@ -104,6 +88,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>Todos os dias, milhões de jogadores ao redor do mundo entram na batalha como um dos mais de 100 heróis de Dota em uma batalha entre equipes de cinco jogadores. Dota 2 é o jogo multijogador de ação e estratégia em tempo real mais profundo já feito, e há sempre uma nova estratégia ou tática a ser descoberta.</p>
 <section id="leitura-do-dataset-e-limpeza" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Leitura do Dataset e limpeza</h1>
 <p>LINK PARA O DATASET https://www.kaggle.com/datasets/psychewolf/dota-2-heroes-dataset?select=heroes_data.csv</p>
@@ -112,12 +97,6 @@ ul.task-list li input[type="checkbox"] {
 Leitura do csv e visualização inicial
 </h3>
 <div class="cell" data-execution_count="2">
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\Asus\Desktop\Heroes Dota2\venvdota\lib\site-packages\IPython\core\formatters.py:342: FutureWarning:
-
-In future versions `DataFrame.to_latex` is expected to utilise the base implementation of `Styler.to_latex` for formatting and rendering. The arguments signature may therefore change. It is recommended instead to use `DataFrame.style.to_latex` which also contains additional functionality.
-</code></pre>
-</div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 
 <div>
@@ -151,52 +130,52 @@ In future versions `DataFrame.to_latex` is expected to utilise the base implemen
   </thead>
   <tbody>
     <tr>
-      <th>29</th>
-      <td>29</td>
-      <td>31</td>
-      <td>npc_dota_hero_lich</td>
-      <td>Lich</td>
+      <th>82</th>
+      <td>82</td>
+      <td>84</td>
+      <td>npc_dota_hero_ogre_magi</td>
+      <td>Ogre Magi</td>
       <td>int</td>
-      <td>Ranged</td>
-      <td>['Support', 'Nuker']</td>
-      <td>/apps/dota2/images/heroes/lich_full.png?</td>
-      <td>/apps/dota2/images/heroes/lich_icon.png</td>
+      <td>Melee</td>
+      <td>['Support', 'Nuker', 'Disabler', 'Durable', 'I...</td>
+      <td>/apps/dota2/images/heroes/ogre_magi_full.png?</td>
+      <td>/apps/dota2/images/heroes/ogre_magi_icon.png</td>
       <td>200</td>
       <td>...</td>
-      <td>13135</td>
-      <td>13112</td>
-      <td>6518</td>
-      <td>6321</td>
-      <td>3067</td>
-      <td>1713</td>
-      <td>827</td>
-      <td>48.469007</td>
+      <td>23993</td>
+      <td>20336</td>
+      <td>10459</td>
+      <td>7962</td>
+      <td>4064</td>
+      <td>1600</td>
+      <td>807</td>
+      <td>50.941226</td>
       <td>5</td>
       <td>hard_support</td>
     </tr>
     <tr>
-      <th>115</th>
-      <td>115</td>
-      <td>121</td>
-      <td>npc_dota_hero_grimstroke</td>
-      <td>Grimstroke</td>
-      <td>int</td>
-      <td>Ranged</td>
-      <td>['Support', 'Nuker', 'Disabler', 'Escape']</td>
-      <td>/apps/dota2/images/heroes/grimstroke_full.png?</td>
-      <td>/apps/dota2/images/heroes/grimstroke_icon.png</td>
+      <th>114</th>
+      <td>114</td>
+      <td>120</td>
+      <td>npc_dota_hero_pangolier</td>
+      <td>Pangolier</td>
+      <td>agi</td>
+      <td>Melee</td>
+      <td>['Carry', 'Nuker', 'Disabler', 'Durable', 'Esc...</td>
+      <td>/apps/dota2/images/heroes/pangolier_full.png?</td>
+      <td>/apps/dota2/images/heroes/pangolier_icon.png</td>
       <td>200</td>
       <td>...</td>
-      <td>13142</td>
-      <td>13809</td>
-      <td>6571</td>
-      <td>6162</td>
-      <td>2900</td>
-      <td>2168</td>
-      <td>981</td>
-      <td>46.590636</td>
-      <td>5</td>
-      <td>hard_support</td>
+      <td>10371</td>
+      <td>12044</td>
+      <td>5970</td>
+      <td>6522</td>
+      <td>3247</td>
+      <td>2833</td>
+      <td>1457</td>
+      <td>50.283271</td>
+      <td>3</td>
+      <td>offlane</td>
     </tr>
   </tbody>
 </table>
@@ -220,12 +199,6 @@ In future versions `DataFrame.to_latex` is expected to utilise the base implemen
 </div>
 </div>
 <div class="cell" data-execution_count="4">
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\Asus\Desktop\Heroes Dota2\venvdota\lib\site-packages\IPython\core\formatters.py:342: FutureWarning:
-
-In future versions `DataFrame.to_latex` is expected to utilise the base implementation of `Styler.to_latex` for formatting and rendering. The arguments signature may therefore change. It is recommended instead to use `DataFrame.style.to_latex` which also contains additional functionality.
-</code></pre>
-</div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 
 <div>
@@ -259,76 +232,76 @@ In future versions `DataFrame.to_latex` is expected to utilise the base implemen
   </thead>
   <tbody>
     <tr>
-      <th>115</th>
-      <td>Grimstroke</td>
-      <td>int</td>
-      <td>Ranged</td>
-      <td>200</td>
-      <td>75</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>21</td>
-      <td>25</td>
-      <td>21</td>
-      <td>...</td>
-      <td>27629</td>
-      <td>13142</td>
-      <td>13809</td>
-      <td>6571</td>
-      <td>6162</td>
-      <td>2900</td>
-      <td>2168</td>
-      <td>981</td>
-      <td>46.590636</td>
-      <td>hard_support</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Phantom Lancer</td>
-      <td>agi</td>
+      <th>71</th>
+      <td>Alchemist</td>
+      <td>str</td>
       <td>Melee</td>
       <td>200</td>
       <td>75</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>26</td>
-      <td>40</td>
-      <td>19</td>
+      <td>-1.0</td>
+      <td>24</td>
+      <td>33</td>
+      <td>25</td>
       <td>...</td>
-      <td>19625</td>
-      <td>9828</td>
-      <td>10065</td>
-      <td>5050</td>
-      <td>5627</td>
-      <td>2849</td>
-      <td>2269</td>
-      <td>1152</td>
-      <td>50.671226</td>
-      <td>safelane</td>
+      <td>19468</td>
+      <td>10406</td>
+      <td>9606</td>
+      <td>5247</td>
+      <td>4369</td>
+      <td>2298</td>
+      <td>1442</td>
+      <td>765</td>
+      <td>52.710377</td>
+      <td>mid</td>
     </tr>
     <tr>
-      <th>54</th>
-      <td>Clinkz</td>
-      <td>agi</td>
-      <td>Ranged</td>
+      <th>52</th>
+      <td>Lifestealer</td>
+      <td>str</td>
+      <td>Melee</td>
       <td>200</td>
       <td>75</td>
       <td>0.0</td>
-      <td>0.0</td>
-      <td>15</td>
+      <td>1.0</td>
       <td>21</td>
-      <td>14</td>
+      <td>27</td>
+      <td>25</td>
       <td>...</td>
-      <td>15296</td>
-      <td>8393</td>
-      <td>7108</td>
-      <td>3867</td>
-      <td>3040</td>
-      <td>1734</td>
-      <td>517</td>
-      <td>279</td>
-      <td>56.592634</td>
-      <td>mid</td>
+      <td>16404</td>
+      <td>8084</td>
+      <td>7235</td>
+      <td>3571</td>
+      <td>2823</td>
+      <td>1407</td>
+      <td>637</td>
+      <td>309</td>
+      <td>49.595376</td>
+      <td>safelane</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Slardar</td>
+      <td>str</td>
+      <td>Melee</td>
+      <td>200</td>
+      <td>75</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>30</td>
+      <td>38</td>
+      <td>21</td>
+      <td>...</td>
+      <td>21034</td>
+      <td>10548</td>
+      <td>8784</td>
+      <td>4439</td>
+      <td>3493</td>
+      <td>1706</td>
+      <td>800</td>
+      <td>387</td>
+      <td>48.753785</td>
+      <td>offlane</td>
     </tr>
   </tbody>
 </table>
@@ -344,17 +317,11 @@ Checando valores nulos ou NaN
 <pre><code>&lt;AxesSubplot: &gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<pre><code>&lt;Figure size 1650x1050 with 2 Axes&gt;</code></pre>
+<p><img src="app_files/figure-html/cell-7-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Não existem valores nulos ou NaN no data frame</p>
 <div class="cell" data-execution_count="7">
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\Asus\Desktop\Heroes Dota2\venvdota\lib\site-packages\IPython\core\formatters.py:342: FutureWarning:
-
-In future versions `DataFrame.to_latex` is expected to utilise the base implementation of `Styler.to_latex` for formatting and rendering. The arguments signature may therefore change. It is recommended instead to use `DataFrame.style.to_latex` which also contains additional functionality.
-</code></pre>
-</div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 
 <div>
@@ -590,7 +557,7 @@ In future versions `DataFrame.to_latex` is expected to utilise the base implemen
 <h1 data-number="2"><span class="header-section-number">2</span> Visualização gráfica</h1>
 <div class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
-<pre><code>&lt;Figure size 3600x2400 with 3 Axes&gt;</code></pre>
+<p><img src="app_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <ul>
@@ -618,14 +585,8 @@ Safelane sendo a função principal mais realizada pelos herois e o Mid sendo a 
 </div>
 <div class="cell" data-execution_count="10">
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\Asus\AppData\Local\Temp\ipykernel_16008\1741920496.py:4: FutureWarning:
-
-The default value of numeric_only in DataFrame.corr is deprecated. In a future version, it will default to False. Select only valid columns or specify the value of numeric_only to silence this warning.
-
-C:\Users\Asus\Desktop\Heroes Dota2\venvdota\lib\site-packages\IPython\core\formatters.py:342: FutureWarning:
-
-In future versions `DataFrame.to_latex` is expected to utilise the base implementation of `Styler.to_latex` for formatting and rendering. The arguments signature may therefore change. It is recommended instead to use `DataFrame.style.to_latex` which also contains additional functionality.
-</code></pre>
+<pre><code>C:\Users\Asus\AppData\Local\Temp\ipykernel_12368\1741920496.py:4: FutureWarning: The default value of numeric_only in DataFrame.corr is deprecated. In a future version, it will default to False. Select only valid columns or specify the value of numeric_only to silence this warning.
+  corr = df_stats.corr().iloc[2:,2:]</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 
@@ -837,7 +798,7 @@ In future versions `DataFrame.to_latex` is expected to utilise the base implemen
 </div>
 <div class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
-<pre><code>&lt;Figure size 1650x1050 with 2 Axes&gt;</code></pre>
+<p><img src="app_files/figure-html/cell-12-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 Existem algumas informações importantes nesse gráfico.
@@ -865,7 +826,7 @@ gráfico abaixo servem para fundamentar os tópicos 3 e 4
 </div>
 <div class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
-<pre><code>&lt;Figure size 1650x1050 with 1 Axes&gt;</code></pre>
+<p><img src="app_files/figure-html/cell-14-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -885,12 +846,6 @@ O heroi mais escolhido na 8 escolha é Void Spirit</code></pre>
 </div>
 <p>criação de nova coluna para saber qual é o heroi mais escolhido, independente de posição ou ordem da escolha.</p>
 <div class="cell" data-execution_count="15">
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\Asus\Desktop\Heroes Dota2\venvdota\lib\site-packages\IPython\core\formatters.py:342: FutureWarning:
-
-In future versions `DataFrame.to_latex` is expected to utilise the base implementation of `Styler.to_latex` for formatting and rendering. The arguments signature may therefore change. It is recommended instead to use `DataFrame.style.to_latex` which also contains additional functionality.
-</code></pre>
-</div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 
 <div>
@@ -926,12 +881,6 @@ In future versions `DataFrame.to_latex` is expected to utilise the base implemen
 </div>
 <p>2 Herois (Pudge e Juggernaut) apareceram na lista anterior Importante também saber os menos escolhidos</p>
 <div class="cell" data-execution_count="16">
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\Asus\Desktop\Heroes Dota2\venvdota\lib\site-packages\IPython\core\formatters.py:342: FutureWarning:
-
-In future versions `DataFrame.to_latex` is expected to utilise the base implementation of `Styler.to_latex` for formatting and rendering. The arguments signature may therefore change. It is recommended instead to use `DataFrame.style.to_latex` which also contains additional functionality.
-</code></pre>
-</div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 
 <div>
@@ -972,12 +921,6 @@ In future versions `DataFrame.to_latex` is expected to utilise the base implemen
 </div>
 </div>
 <div class="cell" data-execution_count="18">
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\Asus\Desktop\Heroes Dota2\venvdota\lib\site-packages\IPython\core\formatters.py:342: FutureWarning:
-
-In future versions `DataFrame.to_latex` is expected to utilise the base implementation of `Styler.to_latex` for formatting and rendering. The arguments signature may therefore change. It is recommended instead to use `DataFrame.style.to_latex` which also contains additional functionality.
-</code></pre>
-</div>
 <div class="cell-output cell-output-display" data-execution_count="18">
 
 <div>
@@ -1013,12 +956,6 @@ In future versions `DataFrame.to_latex` is expected to utilise the base implemen
 </div>
 <p>MENOR</p>
 <div class="cell" data-execution_count="19">
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\Asus\Desktop\Heroes Dota2\venvdota\lib\site-packages\IPython\core\formatters.py:342: FutureWarning:
-
-In future versions `DataFrame.to_latex` is expected to utilise the base implementation of `Styler.to_latex` for formatting and rendering. The arguments signature may therefore change. It is recommended instead to use `DataFrame.style.to_latex` which also contains additional functionality.
-</code></pre>
-</div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 
 <div>
@@ -1057,32 +994,7 @@ In future versions `DataFrame.to_latex` is expected to utilise the base implemen
 <h1 data-number="4"><span class="header-section-number">4</span> Visualização gráfica 2</h1>
 <div class="cell" data-execution_count="20">
 <div class="cell-output cell-output-display">
-
-<div>                            <div id="068aae0f-cf7a-4b2c-8e60-ca2acd669047" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("068aae0f-cf7a-4b2c-8e60-ca2acd669047")) {                    Plotly.newPlot(                        "068aae0f-cf7a-4b2c-8e60-ca2acd669047",                        [{"customdata":[["agi","Anti-Mage"],["agi","Bloodseeker"],["agi","Drow Ranger"],["agi","Juggernaut"],["agi","Mirana"],["agi","Morphling"],["agi","Shadow Fiend"],["agi","Phantom Lancer"],["agi","Razor"],["agi","Vengeful Spirit"],["agi","Riki"],["agi","Sniper"],["agi","Venomancer"],["agi","Faceless Void"],["agi","Phantom Assassin"],["agi","Templar Assassin"],["agi","Viper"],["agi","Luna"],["agi","Clinkz"],["agi","Broodmother"],["agi","Bounty Hunter"],["agi","Weaver"],["agi","Spectre"],["agi","Ursa"],["agi","Gyrocopter"],["agi","Lone Druid"],["agi","Meepo"],["agi","Nyx Assassin"],["agi","Naga Siren"],["agi","Slark"],["agi","Medusa"],["agi","Troll Warlord"],["agi","Ember Spirit"],["agi","Terrorblade"],["agi","Arc Warden"],["agi","Monkey King"],["agi","Pangolier"],["agi","Hoodwink"]],"hovertemplate":"primary_attr=%{customdata[0]}<br>main_role=%{x}<br>winrate=%{y}<br>localized_name=%{customdata[1]}<extra></extra>","legendgroup":"agi","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"agi","orientation":"v","showlegend":true,"x":["safelane","safelane","safelane","safelane","support","safelane","mid","safelane","offlane","hard_support","safelane","mid","support","safelane","safelane","mid","mid","safelane","mid","mid","offlane","safelane","safelane","safelane","safelane","mid","mid","offlane","safelane","safelane","safelane","safelane","mid","safelane","mid","safelane","offlane","offlane"],"xaxis":"x","y":[47.87,49.4,48.7,51.31,51.18,47.73,46.48,50.67,52.61,48.26,48.56,46.91,51.34,45.82,46.69,53.46,47.06,50.98,56.59,56.86,54.09,50.53,47.58,50.52,48.58,48.16,51.23,53.18,51.76,48.09,47.19,51.05,48.45,47.99,50.94,51.61,50.28,50.78],"yaxis":"y","type":"scatter"},{"alignmentgroup":"True","customdata":[["agi","Anti-Mage"],["agi","Bloodseeker"],["agi","Drow Ranger"],["agi","Juggernaut"],["agi","Mirana"],["agi","Morphling"],["agi","Shadow Fiend"],["agi","Phantom Lancer"],["agi","Razor"],["agi","Vengeful Spirit"],["agi","Riki"],["agi","Sniper"],["agi","Venomancer"],["agi","Faceless Void"],["agi","Phantom Assassin"],["agi","Templar Assassin"],["agi","Viper"],["agi","Luna"],["agi","Clinkz"],["agi","Broodmother"],["agi","Bounty Hunter"],["agi","Weaver"],["agi","Spectre"],["agi","Ursa"],["agi","Gyrocopter"],["agi","Lone Druid"],["agi","Meepo"],["agi","Nyx Assassin"],["agi","Naga Siren"],["agi","Slark"],["agi","Medusa"],["agi","Troll Warlord"],["agi","Ember Spirit"],["agi","Terrorblade"],["agi","Arc Warden"],["agi","Monkey King"],["agi","Pangolier"],["agi","Hoodwink"]],"hovertemplate":"primary_attr=%{customdata[0]}<br>winrate=%{y}<br>localized_name=%{customdata[1]}<extra></extra>","legendgroup":"agi","marker":{"color":"#636efa","symbol":"circle"},"name":"agi","notched":true,"offsetgroup":"agi","showlegend":false,"xaxis":"x2","y":[47.87,49.4,48.7,51.31,51.18,47.73,46.48,50.67,52.61,48.26,48.56,46.91,51.34,45.82,46.69,53.46,47.06,50.98,56.59,56.86,54.09,50.53,47.58,50.52,48.58,48.16,51.23,53.18,51.76,48.09,47.19,51.05,48.45,47.99,50.94,51.61,50.28,50.78],"yaxis":"y2","type":"box"},{"customdata":[["str","Axe"],["str","Earthshaker"],["str","Pudge"],["str","Sand King"],["str","Sven"],["str","Tiny"],["str","Kunkka"],["str","Slardar"],["str","Tidehunter"],["str","Beastmaster"],["str","Wraith King"],["str","Dragon Knight"],["str","Clockwerk"],["str","Lifestealer"],["str","Omniknight"],["str","Huskar"],["str","Night Stalker"],["str","Doom"],["str","Spirit Breaker"],["str","Alchemist"],["str","Lycan"],["str","Brewmaster"],["str","Chaos Knight"],["str","Treant Protector"],["str","Undying"],["str","Io"],["str","Centaur Warrunner"],["str","Magnus"],["str","Timbersaw"],["str","Bristleback"],["str","Tusk"],["str","Abaddon"],["str","Elder Titan"],["str","Legion Commander"],["str","Earth Spirit"],["str","Underlord"],["str","Phoenix"],["str","Snapfire"],["str","Mars"]],"hovertemplate":"primary_attr=%{customdata[0]}<br>main_role=%{x}<br>winrate=%{y}<br>localized_name=%{customdata[1]}<extra></extra>","legendgroup":"str","marker":{"color":"#EF553B","symbol":"circle"},"mode":"markers","name":"str","orientation":"v","showlegend":true,"x":["offlane","support","offlane","support","safelane","offlane","mid","offlane","offlane","offlane","safelane","offlane","offlane","safelane","support","mid","offlane","offlane","offlane","mid","safelane","offlane","offlane","support","support","hard_support","offlane","offlane","offlane","offlane","offlane","support","offlane","offlane","offlane","support","support","support","offlane"],"xaxis":"x","y":[48.71,51.56,46.7,51.16,43.88,45.48,46.36,48.75,51.59,54.62,51.84,49.24,51.13,49.6,48.64,52.08,52.89,47.09,49.51,52.71,57.52,48.87,52.2,48.7,49.99,50.22,48.83,44.47,48.93,45.59,49.85,51.75,49.04,48.91,51.0,52.32,50.46,46.32,47.76],"yaxis":"y","type":"scatter"},{"alignmentgroup":"True","customdata":[["str","Axe"],["str","Earthshaker"],["str","Pudge"],["str","Sand King"],["str","Sven"],["str","Tiny"],["str","Kunkka"],["str","Slardar"],["str","Tidehunter"],["str","Beastmaster"],["str","Wraith King"],["str","Dragon Knight"],["str","Clockwerk"],["str","Lifestealer"],["str","Omniknight"],["str","Huskar"],["str","Night Stalker"],["str","Doom"],["str","Spirit Breaker"],["str","Alchemist"],["str","Lycan"],["str","Brewmaster"],["str","Chaos Knight"],["str","Treant Protector"],["str","Undying"],["str","Io"],["str","Centaur Warrunner"],["str","Magnus"],["str","Timbersaw"],["str","Bristleback"],["str","Tusk"],["str","Abaddon"],["str","Elder Titan"],["str","Legion Commander"],["str","Earth Spirit"],["str","Underlord"],["str","Phoenix"],["str","Snapfire"],["str","Mars"]],"hovertemplate":"primary_attr=%{customdata[0]}<br>winrate=%{y}<br>localized_name=%{customdata[1]}<extra></extra>","legendgroup":"str","marker":{"color":"#EF553B","symbol":"circle"},"name":"str","notched":true,"offsetgroup":"str","showlegend":false,"xaxis":"x2","y":[48.71,51.56,46.7,51.16,43.88,45.48,46.36,48.75,51.59,54.62,51.84,49.24,51.13,49.6,48.64,52.08,52.89,47.09,49.51,52.71,57.52,48.87,52.2,48.7,49.99,50.22,48.83,44.47,48.93,45.59,49.85,51.75,49.04,48.91,51.0,52.32,50.46,46.32,47.76],"yaxis":"y2","type":"box"},{"customdata":[["int","Bane"],["int","Crystal Maiden"],["int","Puck"],["int","Storm Spirit"],["int","Windranger"],["int","Zeus"],["int","Lina"],["int","Lion"],["int","Shadow Shaman"],["int","Witch Doctor"],["int","Lich"],["int","Enigma"],["int","Tinker"],["int","Necrophos"],["int","Warlock"],["int","Queen of Pain"],["int","Death Prophet"],["int","Pugna"],["int","Dazzle"],["int","Leshrac"],["int","Nature's Prophet"],["int","Dark Seer"],["int","Enchantress"],["int","Jakiro"],["int","Batrider"],["int","Chen"],["int","Ancient Apparition"],["int","Invoker"],["int","Silencer"],["int","Outworld Devourer"],["int","Shadow Demon"],["int","Ogre Magi"],["int","Rubick"],["int","Disruptor"],["int","Keeper of the Light"],["int","Visage"],["int","Skywrath Mage"],["int","Techies"],["int","Oracle"],["int","Winter Wyvern"],["int","Dark Willow"],["int","Grimstroke"],["int","Void Spirit"]],"hovertemplate":"primary_attr=%{customdata[0]}<br>main_role=%{x}<br>winrate=%{y}<br>localized_name=%{customdata[1]}<extra></extra>","legendgroup":"int","marker":{"color":"#00cc96","symbol":"circle"},"mode":"markers","name":"int","orientation":"v","showlegend":true,"x":["hard_support","hard_support","mid","mid","support","mid","support","hard_support","hard_support","hard_support","hard_support","offlane","mid","offlane","hard_support","mid","mid","mid","hard_support","mid","offlane","offlane","hard_support","hard_support","mid","hard_support","hard_support","mid","support","mid","hard_support","hard_support","support","hard_support","hard_support","mid","support","offlane","hard_support","hard_support","support","hard_support","mid"],"xaxis":"x","y":[52.69,49.86,51.25,50.2,51.32,46.98,46.9,50.43,53.37,47.56,48.47,55.78,50.37,48.52,52.3,49.46,49.58,51.33,48.97,49.61,47.35,53.05,47.42,50.24,49.63,53.97,50.6,51.78,47.93,50.61,47.06,50.94,47.73,48.68,45.98,54.62,49.2,49.87,51.45,50.17,51.08,46.59,50.62],"yaxis":"y","type":"scatter"},{"alignmentgroup":"True","customdata":[["int","Bane"],["int","Crystal Maiden"],["int","Puck"],["int","Storm Spirit"],["int","Windranger"],["int","Zeus"],["int","Lina"],["int","Lion"],["int","Shadow Shaman"],["int","Witch Doctor"],["int","Lich"],["int","Enigma"],["int","Tinker"],["int","Necrophos"],["int","Warlock"],["int","Queen of Pain"],["int","Death Prophet"],["int","Pugna"],["int","Dazzle"],["int","Leshrac"],["int","Nature's Prophet"],["int","Dark Seer"],["int","Enchantress"],["int","Jakiro"],["int","Batrider"],["int","Chen"],["int","Ancient Apparition"],["int","Invoker"],["int","Silencer"],["int","Outworld Devourer"],["int","Shadow Demon"],["int","Ogre Magi"],["int","Rubick"],["int","Disruptor"],["int","Keeper of the Light"],["int","Visage"],["int","Skywrath Mage"],["int","Techies"],["int","Oracle"],["int","Winter Wyvern"],["int","Dark Willow"],["int","Grimstroke"],["int","Void Spirit"]],"hovertemplate":"primary_attr=%{customdata[0]}<br>winrate=%{y}<br>localized_name=%{customdata[1]}<extra></extra>","legendgroup":"int","marker":{"color":"#00cc96","symbol":"circle"},"name":"int","notched":true,"offsetgroup":"int","showlegend":false,"xaxis":"x2","y":[52.69,49.86,51.25,50.2,51.32,46.98,46.9,50.43,53.37,47.56,48.47,55.78,50.37,48.52,52.3,49.46,49.58,51.33,48.97,49.61,47.35,53.05,47.42,50.24,49.63,53.97,50.6,51.78,47.93,50.61,47.06,50.94,47.73,48.68,45.98,54.62,49.2,49.87,51.45,50.17,51.08,46.59,50.62],"yaxis":"y2","type":"box"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,0.7363],"title":{"text":"main_role"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"winrate"}},"xaxis2":{"anchor":"y2","domain":[0.7413,1.0],"matches":"x2","showticklabels":false,"showline":false,"ticks":"","showgrid":false},"yaxis2":{"anchor":"x2","domain":[0.0,1.0],"matches":"y","showticklabels":false,"showgrid":true},"legend":{"title":{"text":"primary_attr"},"tracegroupgap":0},"title":{"text":"<b> Taxa de vit\u00f3ria por posi\u00e7\u00e3o principal dos herois </b>"}},                        {"responsive": true}                    ).then(function(){
-                            
-var gd = document.getElementById('068aae0f-cf7a-4b2c-8e60-ca2acd669047');
-var x = new MutationObserver(function (mutations, observer) {{
-        var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
-            console.log([gd, 'removed!']);
-            Plotly.purge(gd);
-            observer.disconnect();
-        }}
-}});
-
-// Listen for the removal of the full notebook cells
-var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
-    x.observe(notebookContainer, {childList: true});
-}}
-
-// Listen for the clearing of the current output cell
-var outputEl = gd.closest('.output');
-if (outputEl) {{
-    x.observe(outputEl, {childList: true});
-}}
-
-                        })                };                });            </script>        </div>
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
 </div>
 </div>
 <h6 class="anchored" data-anchor-id="visualização-gráfica-2">
