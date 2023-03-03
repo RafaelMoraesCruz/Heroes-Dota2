@@ -1,7 +1,7 @@
 # Heroes Dota2
 
 
-#Structure
+# Structure
 ```
 ├── __pycache__
 ├── app_files
