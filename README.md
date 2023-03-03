@@ -1,5 +1,27 @@
 # Heroes Dota2
 
+
+#Structure
+```
+├── __pycache__
+├── app_files
+├── data
+  └── heroes_data.csv
+  └── heroes_data_limpo.csv
+  └── img
+    └── dota2.jpg
+├── .gitignore
+├── README.md
+├── app.html
+├── app.ipynb
+├── app.pdf
+├── app.py
+├── index.html
+├── requirements.txt
+├── style.css
+├── utils.py
+```
+
 HOW TO USE
 
 <ol>
